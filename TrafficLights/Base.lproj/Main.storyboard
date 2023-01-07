@@ -27,7 +27,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6B-gG-utX">
                                                 <rect key="frame" x="97.666666666666657" y="0.0" width="75" height="75"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -66,6 +66,12 @@
                             <constraint firstItem="Gxt-6J-UcW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="tfY-P6-STZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLightLabel" destination="Thi-Tx-k3J" id="8Lv-Re-rEA"/>
+                        <outlet property="mainButton" destination="UWs-MC-dlN" id="oCg-ox-x15"/>
+                        <outlet property="redLightLabel" destination="w6B-gG-utX" id="nHW-Rr-v7Y"/>
+                        <outlet property="yellowLightLabel" destination="Tyy-lE-J90" id="cMF-0L-chO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
