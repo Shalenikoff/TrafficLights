@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_72" orientation="portrait" appearance="dark"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -21,30 +20,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gxt-6J-UcW">
                                 <rect key="frame" x="80" y="119" width="270" height="689"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="abE-dZ-wMy">
-                                        <rect key="frame" x="0.0" y="0.0" width="270" height="365"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="abE-dZ-wMy">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="395"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6B-gG-utX">
-                                                <rect key="frame" x="97.666666666666657" y="0.0" width="75" height="75"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TIb-Yh-elU">
+                                                <rect key="frame" x="92.666666666666657" y="0.0" width="85" height="85"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyy-lE-J90">
-                                                <rect key="frame" x="97.666666666666657" y="145" width="75" height="75"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfE-vY-jb5">
+                                                <rect key="frame" x="92.666666666666657" y="155" width="85" height="85"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thi-Tx-k3J">
-                                                <rect key="frame" x="97.666666666666657" y="290" width="75" height="75"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f8i-E3-X7T">
+                                                <rect key="frame" x="92.666666666666657" y="310" width="85" height="85"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWs-MC-dlN">
@@ -53,6 +43,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Start moving"/>
+                                        <connections>
+                                            <action selector="buttonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ehB-qg-MJS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="tintColor" systemColor="labelColor"/>
@@ -68,10 +61,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenLightLabel" destination="Thi-Tx-k3J" id="8Lv-Re-rEA"/>
-                        <outlet property="mainButton" destination="UWs-MC-dlN" id="oCg-ox-x15"/>
-                        <outlet property="redLightLabel" destination="w6B-gG-utX" id="nHW-Rr-v7Y"/>
-                        <outlet property="yellowLightLabel" destination="Tyy-lE-J90" id="cMF-0L-chO"/>
+                        <outlet property="greenLightView" destination="f8i-E3-X7T" id="xOl-up-6Hv"/>
+                        <outlet property="mainButton" destination="UWs-MC-dlN" id="vF3-kP-Me6"/>
+                        <outlet property="redLightView" destination="TIb-Yh-elU" id="FgR-Hl-upx"/>
+                        <outlet property="yellowLightView" destination="yfE-vY-jb5" id="g2B-f0-Iej"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
